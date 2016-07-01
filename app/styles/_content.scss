@@ -1,0 +1,48 @@
+body {
+color: white;
+}
+
+.container h3 {
+  color: $brand-success;
+}
+
+.container .nav {
+  a {
+    color: $brand-info;
+  }
+}
+
+.marketing {
+  h4 {
+    a {
+    color: $brand-warning;
+    /* yellow */
+  }
+}
+  p {
+    color: $brand-primary;
+    /* blue */
+  }
+}
+
+.footer .glyphicon {
+  color: $brand-danger;
+}
+
+/* Mixin */
+.container .jumbotron {
+  @include border-top-radius(0px);
+  @include border-bottom-radius(50px);
+}
+
+/* Mary's Added Mixins: */
+
+.container .jumbotron {
+@include gradient-horizontal ($start-color: #00FFFF, $end-color: #008B8B, $start-percent: 0%, $end-percent: 100%);
+}
+/* gradient from cyan to darker blue */
+
+.container .nav {
+  @include button-variant ($brand-warning, $brand-success, $brand-info);
+}
+/* nav button colors change on hover - applied to: color, background, border */

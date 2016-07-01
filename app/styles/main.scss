@@ -1,8 +1,15 @@
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+//override Bootstrap variables
+@import "variables";
+//end variables
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
+
+//site-specific styles; add other stylesheets below:
+@import "content";
+//end other stylesheets
 
 .browsehappy {
   margin: 0.2em 0;
@@ -17,10 +24,11 @@ body {
   padding-bottom: 20px;
 }
 
-h1,
-h4 a {
+/* h1, a {
   color: #66CC00;
-}
+} */
+
+/* image: */
 .umbrella-image {
   display: inline;
   margin-left: auto;
@@ -36,7 +44,8 @@ h4 a {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid green;
+  border-bottom: 2px solid navy;
+}
 
   /* Make the masthead heading the same height as the navigation */
   h3 {
@@ -44,15 +53,15 @@ h4 a {
     margin-bottom: 0;
     line-height: 40px;
     padding-bottom: 19px;
-    color: #66CC00;
+    /* color: #00008B;  dark blue; was lt. green #66CC00 */
   }
-}
+
 
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
-  border-top: 1px solid green;
+  color: #5bc0de;
+  border-top: 1px solid #5bc0de;
 }
 
 .container-narrow > hr {
@@ -82,6 +91,7 @@ h4 a {
   .container {
     max-width: 730px;
   }
+}
 
   /* Remove the padding we set earlier */
   .header,
@@ -100,4 +110,3 @@ h4 a {
   .jumbotron {
     border-bottom: 0;
   }
-}
